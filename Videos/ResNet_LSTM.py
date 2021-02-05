@@ -191,6 +191,11 @@ test_loss=[]
 test_acc=[]
 
 best_acc=0
+
+ckpt_dir=os.path.join(os.getcwd(),"models")
+if not os.path.exists(ckpt_dir):
+    os.mkdir(ckpt_dir) 
+    
 for epoch in range(100):
     start=time.time()
     print(f"Epoch {epoch+1}")
